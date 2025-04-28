@@ -1,0 +1,38 @@
+/* ProductStyles.module.css */
+.card {
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  color: black;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.status {
+  font-style: italic;
+  color: #777;
+}
+
+.features {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+.battery {
+  color: #3a3a3a;
+  font-size: 1.1rem;
+}

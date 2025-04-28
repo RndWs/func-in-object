@@ -1,0 +1,11 @@
+
+.laptopCard {
+  border: 2px solid pink;
+  margin: 10px;
+  padding: 10px;
+
+  .buttonSection {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

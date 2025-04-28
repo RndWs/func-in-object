@@ -1,0 +1,11 @@
+
+.tabletCard {
+  border: 2px solid purple;
+  margin: 10px;
+  padding: 10px;
+  
+  .buttonSection {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
