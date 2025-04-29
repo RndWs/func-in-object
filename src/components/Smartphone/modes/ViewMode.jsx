@@ -1,5 +1,5 @@
 
-import styles from "../../Laptop/LaptopStyles.module.css";
+import styles from "../SmartphoneStyles.module.css";
 
 const ViewMode = ({ formData, onEditClick, onDetailClick }) => {
 
@@ -10,10 +10,15 @@ const ViewMode = ({ formData, onEditClick, onDetailClick }) => {
         <button onClick={onEditClick}>Edit</button>
         <button onClick={onDetailClick}>Detail</button>
       </div>
-      <h2 className={styles.title}>
-        {formData.name}
-      </h2>
-      <p>{formData.description}</p>
+      <h2 className={styles.title}>{formData.name}</h2>
+      <p className={styles.manufacturer}>{formData.manufacturer}</p>
+
+      <ul className={styles.features}>
+        {formData.features.map((feature, index) => (
+          <li key={index}>{feature}</li>
+        ))}
+      </ul>
+
       <p>
         <> Price: $ {Number(formData.price).toFixed(2)}</>
       </p>

@@ -24,7 +24,10 @@ function Laptop({
   
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData({
+      ...formData,
+      [name]: name === "inStock" ? e.target.checked : value,
+    });
   };
   
   return (
