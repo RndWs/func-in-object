@@ -10,7 +10,7 @@ const DetailMode = ({ formData, onBackClick }) => {
       <h2 className={styles.title}>{formData.name}</h2>
       <p>{formData.description}</p>
       <p>
-        <> price: $ {Number(formData.price).toFixed(2)}</>
+        <> Price: $ {Number(formData.price).toFixed(2)}</>
       </p>
       <p>{formData.inStock ? "Available" : "Out of Stock"}</p>
     </>

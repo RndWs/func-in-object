@@ -5,7 +5,7 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
 
   return (
     <>
-      <h2 className={styles.title}>
+      <p className={styles.title}>
         <label>
           Name:{" "}
           <input
@@ -13,9 +13,10 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
             value={formData.name || ""}
             onChange={onChange}
             placeholder="Name"
+            className={styles.input}
           />
         </label>
-      </h2>
+      </p>
       <p>
         <label>
           Descritption:{" "}
@@ -24,6 +25,7 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
             value={formData.description || ""}
             onChange={onChange}
             placeholder="Description"
+            className={styles.input}
           />
         </label>
       </p>
@@ -36,6 +38,7 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
             value={formData.price || ""}
             onChange={onChange}
             placeholder="Price"
+            className={styles.input}
           />
         </label>
       </p>
@@ -47,14 +50,17 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
             type="checkbox"
             checked={formData.inStock || false}
             onChange={onChange}
+            className={styles.input}
           />
         </label>
       </p>
 
-      <button onClick={()=>onSave(formData)}>
-        {mode === "edit" ? "Save Changes" : "Save"}
-      </button>
-      <button onClick={onBackClick}>Back</button>
+      <div className={styles.buttonSection}>
+        <button onClick={() => onSave(formData)}>
+          {mode === "edit" ? "Save Changes" : "Save"}
+        </button>
+        <button onClick={onBackClick}>Back</button>
+      </div>
     </>
   );
 };

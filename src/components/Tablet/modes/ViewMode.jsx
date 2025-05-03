@@ -11,8 +11,8 @@ const ViewMode = ({ formData, onEditClick, onDetailClick }) => {
           <button onClick={onDetailClick}>Detail</button>
         </div>
         <h2 className={styles.title}>{formData.name}</h2>
-        <p className={styles.screenSize}>{formData.screenSize}</p>
-        <p className={styles.batteryLife}>{formData.batteryLife}</p>
+        <p className={styles.screenSize}>screen size: {formData.screenSize}</p>
+        <p className={styles.batteryLife}> battery life: {formData.batteryLife}</p>
         <p>
           <> Price: $ {Number(formData.price).toFixed(2)}</>
         </p>

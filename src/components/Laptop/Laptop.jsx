@@ -5,12 +5,8 @@ import ModeRenderer from "./renderer/ModeRenderer";
 import styles from "./LaptopStyles.module.css";
 
 function Laptop({
-  item,
-  mode,
-  onSave,
-  onEditClick,
-  onDetailClick,
-  onBackClick,
+  item, mode,
+  onSave, onEditClick, onDetailClick, onBackClick,
 }) {
   const [formData, setFormData] = useState(
     item || {

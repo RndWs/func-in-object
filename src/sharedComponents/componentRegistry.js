@@ -18,7 +18,9 @@ class ComponentRegistry {
 }
 
 const componentRegistry = new ComponentRegistry();
+
 componentRegistry.register("laptop", Laptop);
 componentRegistry.register("smartphone", Smartphone);
 componentRegistry.register("tablet", Tablet);
+
 export default componentRegistry;

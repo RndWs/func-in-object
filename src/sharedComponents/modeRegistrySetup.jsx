@@ -44,7 +44,6 @@ modeRegistry.register(
   "edit",
   ({ selectedItem, handleUpdateItem, handleBackClick }) => {
     console.log(`selectedItem: ` + JSON.stringify(selectedItem));
-
     const Component = componentRegistry.getComponent(selectedItem.type);
     return (
       <div>

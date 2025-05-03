@@ -5,14 +5,8 @@ import EditMode from "../modes/EditMode";
 import DetailMode from "../modes/DetailMode"; // Example for a new mode
 
 function ModeRenderer({
-  mode,
-  item,
-  formData,
-  onChange,
-  onSave,
-  onEditClick,
-  onDetailClick,
-  onBackClick,
+  mode, item, formData,
+  onChange, onSave, onEditClick, onDetailClick, onBackClick,
 }) {
   const modeComponents = {
     view: ViewMode,

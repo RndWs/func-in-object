@@ -1,0 +1,32 @@
+
+[
+  {
+      "id": 1,
+      "type": "laptop",
+      "name": "Laptop",
+      "description": "Acer Aspire 3 A315-24P-R7VH Slim Laptop | 15.6\" Full HD IPS Display | AMD Ryzen 3 7320U Quad-Core Processor | AMD Radeon Graphics | 8GB LPDDR5 | 128GB NVMe SSD | Wi-Fi 6 | Windows 11 Home in S Mode",
+      "price": 1299.99,
+      "inStock": true
+  },
+  {
+      "id": 2,
+      "type": "smartphone",
+      "name": "Smartphone",
+      "manufacturer": "TechCorp",
+      "features": [
+      "5G",
+      "OLED Display"
+    ],
+      "price": 799.99,
+      "inStock": false
+  },
+  {
+      "id": 3,
+      "type": "tablet",
+      "name": "Tablet",
+      "screenSize": "10.5 inches",
+      "batteryLife": "12 hours",
+      "price": 499.99,
+      "inStock": true
+  }
+]
