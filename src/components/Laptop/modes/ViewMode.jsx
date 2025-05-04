@@ -3,12 +3,11 @@ import styles from "../../Laptop/LaptopStyles.module.css";
 
 const ViewMode = ({ formData, onEditClick, onDetailClick }) => {
 
-  console.log(JSON.stringify(formData));
   return (
     <>
       <div className={styles.buttonSection}>
         <button onClick={onEditClick}>Edit</button>
-        <button onClick={onDetailClick}>Detail</button>
+        <button onClick={()=>onDetailClick(formData, "detail")}>Detail</button>
       </div>
       <h2 className={styles.title}>
         {formData.name}

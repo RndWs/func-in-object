@@ -5,7 +5,7 @@ import EditMode from "../modes/EditMode";
 import DetailMode from "../modes/DetailMode"; // Example for a new mode
 
 function ModeRenderer({
-  mode, item, formData,
+  mode, modeBack, item, formData,
   onChange, onSave, onEditClick, onDetailClick, onBackClick,
 }) {
   const modeComponents = {
@@ -20,6 +20,7 @@ function ModeRenderer({
   return ModeComponent ? (
     <ModeComponent
       mode={mode}
+      modeBack={modeBack}
       item={item}
       formData={formData}
       onChange={onChange}

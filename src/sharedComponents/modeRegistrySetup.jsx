@@ -13,8 +13,8 @@ modeRegistry.register(
           key={item.id}
           item={item}
           mode="view"
-          onEditClick={() => handleEditClick(item)}
-          onDetailClick={() => handleDetailClick(item)} // Pass this callback
+          onEditClick={() => handleEditClick(item, "view")}
+          onDetailClick={() => handleDetailClick(item, "view")} // Pass this callback
         />
       );
     })}
@@ -24,15 +24,15 @@ modeRegistry.register(
 
 modeRegistry.register(
   "detail",
-  ({ selectedItem, handleBackClick }) => {
-    console.log(`selectedItem: ` + JSON.stringify(selectedItem));
+  ({ selectedItem, modeBack, handleEditClick, handleBackClick }) => {
     const Component = componentRegistry.getComponent(selectedItem.type);
     return (
       <div>
         <Component
           item={selectedItem}
           mode="detail"
-          onBackClick={handleBackClick}
+          onEditClick={() => handleEditClick(selectedItem, "detail")}
+          onBackClick={() => handleBackClick(modeBack)}
         />
       </div>
     );
@@ -42,16 +42,15 @@ modeRegistry.register(
 
 modeRegistry.register(
   "edit",
-  ({ selectedItem, handleUpdateItem, handleBackClick }) => {
-    console.log(`selectedItem: ` + JSON.stringify(selectedItem));
+  ({ selectedItem, modeBack, handleUpdateItem, handleBackClick }) => {
     const Component = componentRegistry.getComponent(selectedItem.type);
     return (
       <div>
         <Component
           item={selectedItem}
           mode="edit"
-          onSave={handleUpdateItem}
-          onBackClick={handleBackClick}
+          onSave={() => handleUpdateItem(selectedItem, modeBack)}
+          onBackClick={() => handleBackClick(selectedItem, modeBack)}
         />
       </div>
     );

@@ -1,7 +1,14 @@
 
+import { useEffect } from 'react'
+
 import styles from "../../Laptop/LaptopStyles.module.css";
 
-const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
+const EditMode = ({ mode, modeBack, formData, onChange, onSave, onBackClick }) => {
+
+  
+  useEffect;() => {
+    console.log(`modeBack: ${modeBack}`);
+  },[modeBack];
 
   return (
     <>
@@ -56,10 +63,10 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
       </p>
 
       <div className={styles.buttonSection}>
-        <button onClick={() => onSave(formData)}>
+        <button onClick={() => onSave(formData, modeBack)}>
           {mode === "edit" ? "Save Changes" : "Save"}
         </button>
-        <button onClick={onBackClick}>Back</button>
+        <button onClick={() => onBackClick(formData, modeBack)}>Back</button>
       </div>
     </>
   );

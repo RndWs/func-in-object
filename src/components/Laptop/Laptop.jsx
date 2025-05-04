@@ -5,7 +5,7 @@ import ModeRenderer from "./renderer/ModeRenderer";
 import styles from "./LaptopStyles.module.css";
 
 function Laptop({
-  item, mode,
+  item, mode, modeBack,
   onSave, onEditClick, onDetailClick, onBackClick,
 }) {
   const [formData, setFormData] = useState(
@@ -30,6 +30,7 @@ function Laptop({
     <div className={styles.laptopCard}>
       <ModeRenderer
         mode={mode}
+        modeBack={modeBack}
         item={item}
         formData={formData}
         onChange={handleInputChange}
