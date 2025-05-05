@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #env
+=======
+
+#.env
+>>>>>>> c1ec6692f4dcd030b9e2e70cbb293045b1fdd8d9
 .env
 
 # Logs
