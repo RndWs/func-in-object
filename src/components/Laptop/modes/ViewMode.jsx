@@ -3,7 +3,6 @@ import styles from "../../Laptop/LaptopStyles.module.css";
 
 const ViewMode = ({ formData, onEditClick, onDetailClick }) => {
 
-  console.log(JSON.stringify(formData));
   return (
     <>
       <div className={styles.buttonSection}>

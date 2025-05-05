@@ -16,9 +16,6 @@ const useActionHandler = (
       setMode("view");
     },
     handleUpdateItem: (updatedItem) => {
-      console.log(`handleUpdateItem:->`);
-      console.log(`updatedItem.id: ${updatedItem.id}`);
-
       setItems((prevItems) =>
         prevItems.map((item) =>
           item.id === updatedItem.id ? updatedItem : item
