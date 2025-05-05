@@ -24,13 +24,14 @@ modeRegistry.register(
 
 modeRegistry.register(
   "detail",
-  ({ selectedItem, handleBackClick }) => {
+  ({ selectedItem, handleEditClick, handleBackClick }) => {
     const Component = componentRegistry.getComponent(selectedItem.type);
     return (
       <div>
         <Component
           item={selectedItem}
           mode="detail"
+          onEditClick={() => handleEditClick(selectedItem)}
           onBackClick={handleBackClick}
         />
       </div>

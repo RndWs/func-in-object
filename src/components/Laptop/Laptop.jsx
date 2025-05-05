@@ -25,7 +25,7 @@ function Laptop({
       [name]: name === "inStock" ? e.target.checked : value,
     });
   };
-  
+
   return (
     <div className={styles.laptopCard}>
       <ModeRenderer

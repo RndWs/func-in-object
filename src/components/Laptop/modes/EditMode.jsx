@@ -56,9 +56,11 @@ const EditMode = ({ mode, formData, onChange, onSave, onBackClick }) => {
       </p>
 
       <div className={styles.buttonSection}>
-        <button onClick={() => onSave(formData)}>
-          {mode === "edit" ? "Save Changes" : "Save"}
-        </button>
+        {
+          formData.name && formData.description && formData.price>0 &&<button onClick={() => onSave(formData)}>
+            {mode === "edit" ? "Save Changes" : "Save"}
+          </button>
+        }
         <button onClick={onBackClick}>Back</button>
       </div>
     </>

@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import modeRegistry from "./sharedComponents/modeRegistry";
 import "./sharedComponents/modeRegistrySetup";
@@ -13,15 +13,23 @@ function App() {
   const [items, setItems] = useState(catalog);
 
   const [mode, setMode] = useState("view"); // "view", "detail", "edit", or "add"
+  const [modeBack, setModeBack] = useState([]); // "view", "detail", "edit", or "add"
+  const [selectedItemBack, setSelectedItemBack] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedType, setSelectedType] = useState("laptop");
   
   const { actionHandlers } = useActionHandler(
     items, setItems,
     selectedItem, setSelectedItem,
+    selectedItemBack, setSelectedItemBack,
     selectedType, setSelectedType,
-    mode, setMode
+    mode, setMode,
+    modeBack, setModeBack
   );
+
+  useEffect(() => {
+    console.log(`modeBack: ${JSON.stringify(modeBack)}`);
+  }, [modeBack]);
 
   const renderMode = modeRegistry.getRenderFunction(mode);
 

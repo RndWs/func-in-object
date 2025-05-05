@@ -1,10 +1,11 @@
 
 import styles from "../LaptopStyles.module.css";
 
-const DetailMode = ({ formData, onBackClick }) => {
+const DetailMode = ({ formData, onEditClick, onBackClick }) => {
   return (
     <>
       <div className={styles.buttonSection}>
+        <button onClick={onEditClick}>Edit</button>
         <button onClick={onBackClick}>Back</button>
       </div>
       <h2 className={styles.title}>{formData.name}</h2>
