@@ -1,11 +1,11 @@
 
 import styles from "../SmartphoneStyles.module.css";
 
-const DetailMode = ({ formData, onBackClick }) => {
-
+const DetailMode = ({ formData, onEditClick, onBackClick }) => {
   return (
     <>
       <div className={styles.buttonSection}>
+        <button onClick={onEditClick}>Edit</button>
         <button onClick={onBackClick}>Back</button>
       </div>
 
